@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: snakita <snakita@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/01 20:33:06 by snakita           #+#    #+#             */
+/*   Updated: 2022/11/01 20:33:06 by snakita          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -14,11 +25,11 @@ void ft_replace(std::string *s, std::string s1, std::string s2)
 
 	while (1)
 	{
-		pos = (*s).find(s1);
+		pos = s->find(s1);
 		if (pos == std::string::npos)
 			break;
-		(*s).erase(pos, s1.length());
-		(*s).insert(pos, s2);
+		s->erase(pos, s1.length());
+		s->insert(pos, s2);
 	}
 }
 
