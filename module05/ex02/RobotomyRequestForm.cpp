@@ -51,7 +51,8 @@ void RobotomyRequestForm::execute(const Bureaucrat &executor) const
 		throw (Form::FormIsNotSigned());
 	else {
 		std::cout << "Drr..Drr..." << std::endl;
-		int i = std::rand() % 2;
+		srand(time(0));
+		int i = rand() % 2;
 		if (i == 1)
 			std::cout << target << " has been robotomized!" << std::endl;
 		else
